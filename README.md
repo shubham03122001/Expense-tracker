@@ -1,4 +1,5 @@
-AuthService - 
+AuthService :-
+
 This service is responsible for providing authentication and authorization functionalities for the entire system. 
 
 It handles user signup, login, JWT token generation, and refresh token management.
