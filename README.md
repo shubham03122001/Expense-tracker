@@ -1,5 +1,5 @@
-ExpenseService - Manage Expenses
-Overview
+ExpenseService 
+
 The ExpenseService is responsible for managing expenses in the system. It allows users to create, update, and delete expense records. This service is designed to be a central point for handling financial data, including tracking and managing individual expenses.
 
 Key Features
