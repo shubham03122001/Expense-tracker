@@ -5,8 +5,7 @@ services:
     image: mysql:8.0
     container_name: mysql-db
     environment:
-      MYSQL_ROOT_PASSWORD: Mukaidevi@1
-      #MYSQL_DATABASE: shared_db
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}  # Referencing the variable from the .env file
     ports:
       - "3306:3306"
     volumes:
@@ -52,7 +51,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/authservice?allowPublicKeyRetrieval=true&useSSL=false
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: Mukaidevi@1
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}  # Referencing the variable from the .env file
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
     networks:
       - spring-net
@@ -68,7 +67,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/userservice?allowPublicKeyRetrieval=true&useSSL=false
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: Mukaidevi@1
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}  # Referencing the variable from the .env file
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
     networks:
       - spring-net
